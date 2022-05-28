@@ -1,0 +1,71 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+choise = input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. ')
+print("\n")
+
+if choise == '0': 
+  print("You chose:")
+  print(rock)
+if choise == '1': 
+  print("You chose:")
+  print(paper)
+if choise == '2': 
+  print("You chose:")
+  print(scissors)
+
+pc_choise = str(random.randint(0,2))
+
+print("\n")
+
+if pc_choise == '0': 
+  print("PC chose:")
+  print(rock)
+if pc_choise == '1': 
+  print("PC chose:")
+  print(paper)
+if pc_choise == '2': 
+  print("PC chose:")
+  print(scissors)
+
+if choise == '0':
+  if pc_choise == '0': print("It's a draw!")
+  if pc_choise == '1': print("You lost!")
+  if pc_choise == '2': print("You won!")
+
+if choise == '1':
+  if pc_choise == '1': print("It's a draw!")
+  if pc_choise == '2': print("You lost!")
+  if pc_choise == '0': print("You won!")
+
+if choise == '2':
+  if pc_choise == '2': print("It's a draw!")
+  if pc_choise == '0': print("You lost!")
+  if pc_choise == '1': print("You won!")
